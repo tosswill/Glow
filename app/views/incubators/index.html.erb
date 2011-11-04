@@ -1,0 +1,35 @@
+<h1>Listing incubators</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Website</th>
+    <th>Body</th>
+    <th>Avg investment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @incubators.each do |incubator| %>
+  <tr>
+    <td><%= incubator.name %></td>
+    <td><%= incubator.street %></td>
+    <td><%= incubator.city %></td>
+    <td><%= incubator.state %></td>
+    <td><%= incubator.website %></td>
+    <td><%= incubator.body %></td>
+    <td><%= incubator.avg_investment %></td>
+    <td><%= link_to 'Show', incubator %></td>
+    <td><%= link_to 'Edit', edit_incubator_path(incubator) %></td>
+    <td><%= link_to 'Destroy', incubator, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Incubator', new_incubator_path %>

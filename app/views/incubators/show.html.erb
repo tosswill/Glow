@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @incubator.name %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @incubator.street %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @incubator.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @incubator.state %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @incubator.website %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @incubator.body %>
+</p>
+
+<p>
+  <b>Avg investment:</b>
+  <%= @incubator.avg_investment %>
+</p>
+
+
+<%= link_to 'Edit', edit_incubator_path(@incubator) %> |
+<%= link_to 'Back', incubators_path %>
